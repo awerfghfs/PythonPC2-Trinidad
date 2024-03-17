@@ -1,0 +1,23 @@
+números = [] 
+num_pares = 0
+num_impares = 0
+
+while True:
+    rpta = input("¿Desea ingresar un número? (SI/NO): ").upper()
+    if rpta == "SI":
+        número = int(input("Ingrese el número: "))
+        números.append(número)
+    elif rpta == "NO":
+        break
+    else:
+        print("Respuesta inválida, responda con SI O NO.")
+
+for num in números:
+    if num % 2 == 0:
+        num_pares += 1
+    else:
+        num_impares += 1
+
+print("números ingresados:", números)
+print("números pares:", num_pares)
+print("números impares:", num_impares)
