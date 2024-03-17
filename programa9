@@ -1,0 +1,6 @@
+def omitir_vocals(cadena):
+    vocals = "aeiouAEIOU"
+    return ''.join(caracter for caracter in cadena if caracter not in vocals)
+texto = input("Ingrese una cadena de texto: ")
+texto_sin_vocals = omitir_vocals(texto)
+print("Texto con vocales omitidas:", texto_sin_vocals)
