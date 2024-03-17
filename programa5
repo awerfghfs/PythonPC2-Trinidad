@@ -1,0 +1,8 @@
+def contar_digitos(numero, digito):
+    num_str = str(numero)
+    cant = num_str.count(str(digito))
+    return cant
+num_ingresado = 157890000
+digito_ingresado = 0
+cant_digitos = contar_digitos(num_ingresado, digito_ingresado)
+print(f"cantidad de veces {digito_ingresado} en el número {num_ingresado}: {cant_digitos}")
