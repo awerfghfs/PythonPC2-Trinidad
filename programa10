@@ -1,0 +1,23 @@
+def obtener_mes_num(mes):
+    meses = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ]
+    try:
+        return str(meses.index(mes) + 1).zfill(2)
+    except ValueError:
+        return None
+def convertir_fecha(fecha):
+    partes = fecha.split()
+    if len(partes) == 3:  # Si la fecha está en formato Mes día, año
+        mes = obtener_mes_num(partes[0])
+        dia = partes[1].rstrip(',')
+        año = partes[2]
+    else:  # Si la fecha está en formato mes-día-año
+        mes, dia, año = fecha.split('/')
+     # en AAAA-MM-DD
+    return f"{año}-{mes.zfill(2)}-{dia.zfill(2)}"
+fecha = input("Ingrese una fecha (en formato mes-día-año o Mes día, año): ")
+#  formato AAAA-MM-DD
+fecha_convertida = convertir_fecha(fecha)
+print("fecha en formato AAAA-MM-DD:", fecha_convertida)
