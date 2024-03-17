@@ -1,0 +1,12 @@
+#la serie de Fibonacci
+def fibonacci(n):
+    fibonacci_series = [0, 1] 
+    while True:
+        next_num = fibonacci_series[-1] + fibonacci_series[-2]
+        if next_num > n:
+            break
+        fibonacci_series.append(next_num)
+    return fibonacci_series
+fibonacci_series = fibonacci(50)
+print("serie de Fibonacci hasta 50:")
+print(fibonacci_series)
