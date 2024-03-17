@@ -1,0 +1,14 @@
+alumnos = [] 
+num_alumnos = int(input("ingrese la cantidad de alumnos: "))
+# ingresar los datos de cada alumno
+for i in range(num_alumnos):
+    nombre = input(f"ingrese el nombre del alumno {i+1}: ")
+    notas = []
+    for j in range(3):
+        nota = float(input(f"ingrese la calificación {j+1} para {nombre}: "))
+        notas.append(nota)
+    alumno = {"alumno": nombre, "notas": notas}
+    alumnos.append(alumno)
+print("\nlistado de alumnos:")
+for alumno in alumnos:
+    print(alumno)
