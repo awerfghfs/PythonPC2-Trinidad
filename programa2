@@ -1,0 +1,5 @@
+num_filas = 5
+for i in range(num_filas):
+    print('* ' * (i + 1))
+for i in range(num_filas - 1):
+    print('* ' * (num_filas - i - 1))
